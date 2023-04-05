@@ -109,3 +109,17 @@ float: right;}
   .demo:hover {
     opacity: 1;
   }
+  .requestPicture {
+    width: 150px;
+    border-radius: 7px; 
+    float: left;
+    margin-top: 2%;
+    margin-right: 3%;
+    border-radius: 70px;
+  }
+  
+    .bookings { 
+    width: 75%;
+    margin: 5% auto;
+    height: 650px;
+  }

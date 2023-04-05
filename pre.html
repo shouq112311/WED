@@ -7,50 +7,53 @@
     <link rel="stylesheet" href="stylesheet.css" >
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
-    <title>Welcome</title>
+    <title>TeachMe</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-        <a class="navbar-brand" href="#">
-            <img src="logo.JPG" alt="logo" width="100" height="100">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarSupportedContent" paria-expanded="false" aria-label="Toggle navigation">
-            <SPan class="navbar-toggler-icon"></SPan>
-        </button>
-        <Div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="navbar-nav">
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="logo.jpeg" width="90" height="30" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarSupportedContent" paria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-nav">
+        <div class="collapse navbar-collapse" id="cNav">
+          <!-- list-->
+          <ul class="navbar-nav ms-auto">
+            <a href="#" class="previous round">&#8249;</a>
+              <li class="nav-item"><a href="tutorhome.html" class="nav-link">Home</a></li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"style="color: rgb(5, 5, 113);">My Profile</a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">My Jobs</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="."style="color: rgb(5, 5, 113);">View Profile</a></li>
-                  <li><a class="dropdown-item" href=""style="color: rgb(5, 5, 113);">Manage Profile</a></li>
-                  <li><a class="dropdown-item" href="first page.html"style="color: rgb(5, 5, 113);">Log Out</a></li>
+                  <li><a class="dropdown-item" href="ToutorcurrentJob.html">Current Jobs</a></li>
+                  <li><a class="dropdown-item" href="ToutorPreviousJob.html">Previous Jobs</a></li>
                 </ul>
               </li>
-                <a class="nav-item nav-link" href="Index0.html"style="color: rgb(5, 5, 113);">Home</a>
-                <a class="nav-item nav-link active" href="#"style="color: rgb(5, 5, 113);">Previous Job</a>
-                <a class="nav-item nav-link active" href="#"style="color: rgb(5, 5, 113);">New Job</a>
-                <a class="nav-item nav-link active" href="#"style="color: rgb(5, 5, 113);">Current Booking</a>
-                <a class="nav-item nav-link active" href="#"style="color: rgb(5, 5, 113);" >Previous Booking</a>
-                <a class="nav-item nav-link active" href="Index0.html" style="color: rgb(5, 5, 113);">About us<span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link active" href="mailto:luxuryTime@gmail.com"style="color: rgb(5, 5, 113);">Conact us</a>
-            </div>
-        </div>
-        </Div>
-    </nav>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">My Profile</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="viewtutorprofile.html">View Profile</a></li>
+                  <li><a class="dropdown-item" href="EditTutorProfile.html">Manage Profile</a></li>
+                  <li><a class="dropdown-item" href="index.html">Log Out</a></li>
+                </ul>
+              </li>
+            <li class="nav-item " ><a href="mailto:TeachMe@gmail.com" class="nav-link ">Contact us</a></li>
+            <a href="#" class="next round">&#8250;</a>
+        </ul>
 
+       </div>
+    </div>
 
-
-
-
+  </nav>
   <h1 style=" text-align: center; margin-top: 3%;">My Previous Jobs</h1>
   <div class = "bookings">
-      <div style="background-image: url();">
-        <img class="requestPicture" src = "parentprofile.png"alt="Profile Picture" > 
+      <div style="background-color: ">
+        <img class="requestPicture" src = "user.jpg"alt="Profile Picture"> 
         <div class = "information" style="text-align:start;">
-          <h4 ><strong>Parent's name:</strong> Sara Alahmadi</h4> 
+          <h4 style="color: white;" ><strong>Parent's name:</strong> Sara Alahmadi</h4> 
+    
           <p><strong>Student's name:</strong> leen Nasser <br>
             <strong> Student's age:</strong> 11 years old <br>
             <strong>Type of classes:</strong> Teach Math <br>
@@ -61,7 +64,7 @@
         </div>
 
       <article>
-            <img class="requestPicture" src = "parentprofile.png" alt="Profile Picture"> 
+            <img class="requestPicture" src = "user.jpg" alt="Profile Picture"> 
             <div class = "information">
             <h4 ><strong>Parent's name:</strong> Rawan Muthana</h4> 
             
@@ -87,20 +90,9 @@
     </article>
   </div>
 
+  <p class="footer">TeachMe &copy;
+    <a href="mailto:Jalees@gmail.com">Contact Us</a>
+    </p>
+  </div> 
 </body>
-
-
-
-    <br>
-    <br>
-    <!--footer-->
-    <footer class="bg-light text-center text-lg-start">
-    
-        <div class="text-center p-3" style="background-color: aliceblue;">
-            luxury time &copy; 2023
-        </div>
-    </footer>
-    </body>
-    
-    
-    </html>
+</html>
