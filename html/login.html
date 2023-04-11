@@ -1,106 +1,487 @@
 <!DOCTYPE html>
 <html>
+  
 <head>
+
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-          <link rel="stylesheet"  href="stylesheet.css">
-        <title>luxury Time</title>
+    <title>jobOffers</title>
+
+
+
+  <style>
+  
+  body{
+background-color: rgb(255, 247, 237);
+}
+
+:root{
+    --form-height:1000px;
+    --form-width: 900px;
+    
+    --left-color:#FFB3B3;
+    
+    --right-color: #FFDBA4;
+  }
+
+  body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.5px;
+
+
+  }
+  
+
+
+.container2{
+    width: 1300px;
+    height: var(--form-height);
+    position: relative;
+    margin: auto;
+    box-shadow: 2px 10px 40px rgba(8, 8, 8, 0.4);
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-image: url(../images/background.JPG) ;
+    background-position:center ;
+    background-size: cover;
+    background-image: linear-gradient(WHITE, #ffefe6);
+    padding-top: 55px;
+overflow: scroll;
+ 
+  }
+
+.backicon{
+margin-left : 30px;
+  width:40px;
+  cursor:pointer;
+  border-radius: 10px; 
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+/* start heder bar */
+.header{
+
+width:100%;
+margin:auto;
+padding:15px 0;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background-image: linear-gradient(to bottom right,#95aac1, #4b6480);
+}
+/*  heder bar END */
+
+/*  logo */
+.logo{
+margin-left : 30px;
+  width:130px;
+  cursor:pointer;
+  border-radius: 10px; 
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+/*
+مدري احطه او لا 
+.logo:hover{
+  margin-left : 30px;
+    width:100px;
+    cursor:pointer;
+    border-radius: 10px; 
+    box-shadow: 2px 5px 12px rgba(60, 53, 53, 0.4);
+    transform: scale(1.09);
+
+  }
+  */
+/*  logo END */
+
+.header ul li{
+list-style:none;
+display:inline-block;
+margin: 0 20px;
+position: relative;
+
+}
+.header ul li a{
+text-decoration: none;
+color: whitesmoke;
+font-family: 'Courier New', monospace;
+font-weight: 800;
+margin-left: -8px;
+
+}
+.header ul li ::after{
+content: '';
+height: 3px;
+width: 0;
+background: white;
+position: absolute;
+left: 0;
+bottom: -10px;
+transition:0.5s ;
+}
+.header ul li :hover::after{
+width: 100%;
+}
+.image {
+  margin-right : 30px;
+  margin-left: 0px;
+  width:80px;
+  cursor:pointer;
+  border-radius: 20px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.image:hover {
+  margin-right : 30px;
+  margin-left: 0px;
+  width:80px;
+  cursor:pointer;
+  border-radius: 200px;
+  box-shadow: 2px 5px 12px rgba(8, 8, 8, 0.4);
+  transform: scale(1.09);
+}
+
+
+
+/* DROPDOWN MENU TO USER ICON */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+
+}
+.dropdown ul {
+    margin-left: -140px;
+  padding-right:40px;
+  margin-top: -1px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  margin-right: 5px;
+    display: none;
+  position: absolute;
+  background-color: #383535;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+
+}
+
+.dropdown:hover ul {
+  display: block;
+}
+.dropdown a{
+    text-decoration: none;
+color: rgb(0, 0, 0);
+text-transform: uppercase;
+font-family: 'Courier New', monospace;
+padding-bottom: 10px;
+}
+
+
+
+/* DROPDOWN MENU TO USER ICON ENDs*/
+
+.ToTop{
+margin-left : 0;
+  width:30px;
+  cursor:pointer;
+  border-radius: 10px; 
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.praOL p{
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 14px;
+  width: 800px;
+	line-height: 20px;
+  font-family: 'Courier New', monospace;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: -5px;
+
+}
+#login1{
+    left: 50px;
+     
+}
+#login2{
+    left: 450px;
+     
+}
+
+
+
+
+  .imagei {
+  margin-top : 10px;
+  margin-left: 10px;
+  width: 40px;
+  cursor:pointer;
+  border-radius: 10px;
+  z-index: -5;
+  }
+
+  .imagei:hover {
+  margin-left: 10px;
+  width:40px;
+  cursor:pointer;
+  border-radius: 15px;
+  box-shadow: 2px 5px 5px rgba(8, 8, 8, 0.4);
+}
+
+  
+
+
+ 
+ div1 {
+    display: none;
+    
+}
+    
+a1:hover + div1 {
+    display: block;
+    position:fixed;
+    z-index: 999999999999999999;
+    text-align: left;
+  background-color:ffe3e3;
+	color: rgb(104, 104, 104);;
+	text-decoration: none;
+	border: 1px solid  rgb(104, 104, 104);
+	padding: 5px 10px;
+	border-radius: 15px;
+  margin-left: 650px;
+  transition: .4s; 
+  z-index: 999999999999999999999999999999999999999999999999999;
+
+}
+input{
+  background-color: rgb(255, 247, 237);
+  color: rgb(104, 104, 104);
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold; 
+  border-radius: 30px;
+  margin-bottom: 5px;
+}
+
+
+h5{
+	color: rgb(76, 76, 76);
+	font-size: 20px;
+	margin-left: 70px;
+  font-family: 'Courier New', monospace;
+  margin-top: -30px; 
+
+}
+.from-box{
+    width: 450px;
+    height: 600px;
+    position: relative;
+    margin: 6% auto;
+    background-color: rgb(255, 247, 237);;
+    padding:5px ;
+    box-shadow: 0px 8px 16px 0px #4b6480;
+    overflow: hidden;
+}
+.button-box{
+    width: 300px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow:0 0 20px 9px #e3dcdc;
+    border-radius: 30px;
+    height: 50px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    transform: scale(1.09);
+    font-family: 'Courier New', monospace;
+font-weight: bold;
+    position: relative;
+    width: 50px;
+   height: 50px;
+}
+button-box:hover{
+text-decoration: none;}
+#btn{
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 110;
+    height: 100;
+    background-image: linear-gradient(to bottom right,#95aac1, #4b6480);
+    border-radius: 30px;
+    transition: .5s;
+}
+.input-ground{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-fild{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999 ;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display:block ;
+    margin: auto;
+    background-image: linear-gradient(to bottom right,#95aac1, #4b6480);
+border:0 ;
+outline: none;
+border-radius: 30px;
+margin-left: 52px;
+}
+.check-box{
+    margin: 50px 15px 30px 0 ;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    box-shadow: 0px 8px 16px 0px #4b6480;
+    color: rgb(76, 76, 76);
+
+}
+span{
+    cursor: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+footer {
+    text-align: center;
+    padding: 0.05px;
+    background-image: linear-gradient(to bottom right,#95aac1, #4b6480);
+
+    color: white;
+  }
+</style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
-        <a class="navbar-brand" href="#">
-            <img src="logo.JPG" width="100" height="100" alt="logo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarSupportedContent" paria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" style="background-color: white;"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="navbar-nav" >
-            <a class="nav-item nav-link" href="Index0.html" style="color: rgb(5, 5, 113);">Home</a>
-            <a class="nav-item nav-link active" href="login.html" style="color: rgb(5, 5, 113);">Login<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="first page.html" style="color: rgb(5, 5, 113);">Join us</a>
-            <a class="nav-item nav-link" href="mailto:luxuryTimel@gmail.com" style="color:rgb(5, 5, 113) ;">Contact us</a>
-            <a class="nav-item nav-link active" href="first page.html" style="color: rgb(5, 5, 113);">About us<span class="sr-only">(current)</span></a>
+    <div class="header" >
+      <image src="../image/logooo.png" class="logo">
+    
+      <ul>
+        <li><a href="../html/HK-homepage.html">Home</a></li>
+        <li><a href="mailto:luxurytimeInfo.sa@gmail.com">Contact Us</a></li>
+      </ul>
+ 
 
-          </div>
-        </div>
-      </nav>
-      <section class="vh-100" style="background-color: #001536;">
-        <div class="container h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-lg-12 col-xl-11">
-              <div class="card text-black" style="border-radius: 25px;">
-                <div class="card-body p-md-5">
-                  <div class="row justify-content-center">
-                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-      
-                      <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style="color: #011f4e;">WELCOME BACK</p>
-                      <img src="login-logo-png-3.png" class="rounded-circle2" style="width: 150px; margin-left: 100px;"/>
-                      <form class="mx-1 mx-md-4">
-                        
-                       
-            
-                      
-                       
-                    <br>
-                   
-      
-                        <div class="d-flex flex-row align-items-center mb-4">
-                          <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                          <div class="form-outline flex-fill mb-0">
-                            <label class="form-label" for="form3Example1c">  Email</label>
-                            <input type="text" id="form3Example1c" class="form-control" placeholder="Enter Email here" />
-                
-                          </div>
-                        </div>
-
-                        <div class="d-flex flex-row align-items-center mb-4">
-                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                            <div class="form-outline flex-fill mb-0">
-                              <label class="form-label" for="form3Example1c"> Password</label>
-                              <input type="text" id="form3Example1c" class="form-control " placeholder="Enter Password here"/>
-                             
-                            </div>
-                          </div>
-
-                        
-      
-                       
-      
-                            <br>
-      
-                         
-                          
-                    <p style="font-size:19px; color: #516e9c;">Not registered? <a href="first page.html" style="color: #00235b;">create an account</a></p>
-                 
-      
-                
-      
-                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                          <button type="button" class="btn btn-primary btn-lg" style="background-color: #042963;">Sign in</button>
-                        </div>
-
-                       
-                       
-      
-                      </form>
-      
-                    </div>
-                   
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer class="bg-light text-center text-lg-start">
+       
+       <div class="dropdown">
+        <ul>
         
-        <div class="text-center p-3" style="color: white; background-color:#001536" >
-            luxury time &copy; 2023  
+            <li><a href="../html/HK-profile.html">View Profile</a></li><br><br>
+            <li><a href="#"><br></a></li>
+            <li><a href="../html/first page.html">Sign-Out</a></li>
+        
+        </ul>
+        
         </div>
-      </footer>
+   </div> 
+   
+   <a href="#" class="back">
+    <image src="../image/back.png" class="back" alt="back" style="width:40px ; margin-left: 30px; margin-top: 30px;" onclick="history.go(-1);"></image>
+  </a>
+    <div class="container2"> 
+        <div class="from-box">
+            <div class="button-box">
+                <div id="btn">
+               <button type="button" class="toggle-btn" onclick="Homeowners()">Homeowners</button>
+               <button type="button" class="toggle-btn" onclick="Housekeeper()" style="margin-left: 80px; "> Housekeeper</button>
+                </div>
+            </div>
+            
+            <form class="input-ground" id="login1">
+              <input type="text" id="user name"  name="User name"  style="background-color:white;  width: 300px; height: 35px;"placeholder="user name" required />
+              <input type="password" id="password"  name="password"  style="background-color:white; width: 300px ; box-shadow: #080000;height: 35px;"  required placeholder="Password"/>
+              <br>
+              <br>
+              <p style="font-size:19px; color: #516e9c;" >Not registered? <a href="first page.html" style="font-size: smaller;">create an account</a></p>
+                  <button type="submit" class="submit-btn">Log in</button>
+           </form>
+           <form class="input-ground" id="login2">
+            <input type="text" id="ID"  name="ID"  style="background-color:white;  width: 300px; height: 35px;"placeholder="ID" required />
+            <input type="password" id="password"  name="password"  style="background-color:white; width: 300px ; box-shadow: #080000;height: 35px;"  required placeholder="Password"/>
+            <br>
+            <br>
+            <p style="font-size:19px; color: #516e9c;" >Not registered? <a href="SIgnup.html" style="font-size: smaller;">create an account</a></p>
 
-</body>
+            <button type="submit" class="submit-btn" >Log in</button>
+
+
+        </form>
+        </div>
+    
+
+ 
+
+      
+
+    </div>
+    
+    </div>  
+
+
+ <!-- Footer -->
+<footer>
+  <p>Copyright &copy; 2023 luxuryTime </p>
+  <p><a href="mailto:luxurytimeInfo.sa@gmail.com" style="font-size:10px ; color:rgb(255, 255, 255); text-decoration:none;">Contact Us</a></p>
+
+      <!------------  BACK TO TOP   ----------->
+      <a href="#" class="to-top">
+          <image src="../image/to top.png" class="ToTop" alt="toTop"></image>
+        </a>
+</footer>    
+
+<script>
+    var x= document.getElementById("login1")
+    var y= document.getElementById("login2")
+    var z= document.getElementById("btn")
+    function Housekeeper(){
+        x.style.left="-400px";
+        y.style.left="50px";
+        z.style.left="110px";
+
+    }
+
+    function Homeowners(){
+        x.style.left="50px";
+        y.style.left="450px";
+        z.style.left="0px";
+
+    }
+
+
+  </script>  
+   
+
+  
+  
+  </body>
+
+
+
 
 </html>
