@@ -285,7 +285,18 @@ h5{
 }
 .from-box{
     width: 450px;
-    height: 600px;
+    height: 1100px;
+    position: relative;
+    margin: 6% auto;
+    background-color: rgb(255, 247, 237);;
+    padding:5px ;
+    box-shadow: 0px 8px 16px 0px #4b6480;
+    overflow: hidden;
+}
+
+.from-box1{
+    width: 450px;
+    height: 450px;
     position: relative;
     margin: 6% auto;
     background-color: rgb(255, 247, 237);;
@@ -294,13 +305,22 @@ h5{
     overflow: hidden;
 }
 .button-box{
-    width: 300px;
+  
+    width: 200px;
     margin: 35px auto;
+    margin-right: 173px;
     position: relative;
     box-shadow:0 0 20px 9px #e3dcdc;
     border-radius: 30px;
     height: 50px;
+    display: flex;
+    
+
+   
+   
+  
 }
+
 .toggle-btn{
     padding: 10px 30px;
     cursor: pointer;
@@ -308,10 +328,16 @@ h5{
     border: 0;
     transform: scale(1.09);
     font-family: 'Courier New', monospace;
-font-weight: bold;
+    font-weight: bold;
     position: relative;
-    width: 50px;
-   height: 50px;
+    width: 20px;
+    height: 49px;
+    border-radius:30px ;
+    padding: 0px 0px 0px 3px ;
+
+   
+   
+   
 }
 button-box:hover{
 text-decoration: none;}
@@ -324,6 +350,10 @@ text-decoration: none;}
     background-image: linear-gradient(to bottom right,#95aac1, #4b6480);
     border-radius: 30px;
     transition: .5s;
+    display: flex;
+    padding: 0px 6px 6px 9px ;
+  
+    
 }
 .input-ground{
     top: 180px;
@@ -404,12 +434,12 @@ footer {
    <a href="#" class="back">
     <image src="../image/back.png" class="back" alt="back" style="width:40px ; margin-left: 30px; margin-top: 30px;" onclick="history.go(-1);"></image>
   </a>
-    <div class="container2"> 
-        <div class="from-box">
+    <div class="container2">  
+        <div class="from-box1">
             <div class="button-box">
                 <div id="btn">
-               <button type="button" class="toggle-btn" onclick="Homeowners()">Homeowners</button>
-               <button type="button" class="toggle-btn" onclick="Housekeeper()" style="margin-left: 80px; "> Housekeeper</button>
+               <button type="button" class="toggle-btn " onclick="Homeowners()" style="  width: 150px;">Homeowners</button>
+               <button type="button" class="toggle-btn" onclick="Housekeeper()" style=" width: 150px;"> Housekeeper</button>
                 </div>
             </div>
             
@@ -418,7 +448,7 @@ footer {
               <input type="password" id="password"  name="password"  style="background-color:white; width: 300px ; box-shadow: #080000;height: 35px;"  required placeholder="Password"/>
               <br>
               <br>
-              <p style="font-size:19px; color: #516e9c;" >Not registered? <a href="first page.html" style="font-size: smaller;">create an account</a></p>
+              <p style="font-size:19px; color: #516e9c;" >Not registered? <a href="../html/SIgnup.html" style="font-size: smaller;">create an account</a></p>
                   <button type="submit" class="submit-btn">Log in</button>
            </form>
            <form class="input-ground" id="login2">

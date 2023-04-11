@@ -314,20 +314,32 @@ h5{
     font-family: 'Courier New', monospace;
 font-weight: bold;
     position: relative;
-    width: 50px;
-   height: 50px;
+    width: 20px;
+   height: 49px;
+   border-radius:30px ;
+   padding: 0px 0px 0px 8px ;
+
+
 }
 button-box:hover{
-text-decoration: none;}
+  
+  text-decoration: none;
+  
+}
+
+
+
 #btn{
     top: 0;
     left: 0;
     position: relative;
-    width: 110;
+    width: 100;
     height: 100;
     background-image: linear-gradient(to bottom right,#95aac1, #4b6480);
     border-radius: 30px;
     transition: .5s;
+    padding: 0px 0px 0px 8px ;
+
 }
 .input-ground{
     top: 120px;
@@ -420,8 +432,8 @@ footer {
         <div class="from-box">
             <div class="button-box">
                 <div id="btn">
-               <button type="button" class="toggle-btn" onclick="Homeowners()">Homeowners</button>
-               <button type="button" class="toggle-btn" onclick="Housekeeper()" style="margin-left: 80px; "> Housekeeper</button>
+               <button type="button" class="toggle-btn" onclick="Homeowners()" style="  width: 130px;">Homeowners</button>
+               <button type="button" class="toggle-btn" onclick="Housekeeper()" style= " width: 150px; "> Housekeeper</button>
                 </div>
             </div>
             <form class="input-ground" id="login1">
