@@ -2,7 +2,7 @@
 <html>
 
     <head>
-      <title> Previous Request</title>
+      <title> Current Booking</title>
       <link rel = "stylesheet" href ="../css/home.css">
       <script src="../js/postButton.js"></script>
     
@@ -205,7 +205,7 @@
     }
     
     
-    .card{ width:720px; height:450px; margin-left: 215px;
+    .card{ width:720px; height:300px; margin-left: 215px;
         padding: 20px 35px;
         background: linear-gradient(to bottom right,#95aac1, #4b6480);
         border-radius: 20px;
@@ -223,11 +223,10 @@
     transform: scale(1.01);
     }
     input{
-      background-color:white;
-      color: rgb(104, 104, 104);
+      background-color:white;color: rgb(104, 104, 104);
       text-decoration: none;
       border: 2px solid transparent;
-      font-weight: bold; 
+      font-weight: bold;
       border-radius: 30px;
       margin-bottom: 5px;
       width: 180px;
@@ -294,11 +293,11 @@
         <image src="../image/logooo.png" class="logo">
             <ul>
                 <li><a href="../html/HO-homepage.html">Home</a></li>
-                <li style="text-decoration:underline ;"><a href="../html/HO-PreviousRequest.html">Previous Request</a></li>
+                <li><a href="../html/HO-PreviousRequest.html">Previous Request</a></li>
                 <li><a href="../html/HO-newRequest.html">New Request</a></li>
                 <li><a href="../html/HO-viewOffer.html">Offer list</a></li>
-                <li><a href="../html/HO-currentBooking.html">Current Booking</a></li>
-                <li ><a href="../html/HO-PreviousBooking.html">Previous Booking</a></li>
+                <li  style="text-decoration:underline ;"><a href="../html/HO-currentBooking.html">Current Booking</a></li>
+                <li><a href="../html/HO-PreviousBooking.html">Previous Booking</a></li>
             
             </ul>
       
@@ -322,22 +321,22 @@
     
          
       <p style="background-color: white; color:  rgb(87, 86, 86); font-weight:bolder; font-size: 40px ; margin-left: 50px; font-family: Courier New, monospace; margin-top: -10px;">
-        Previous Requests:    
+     Previous Bookings:    
      </p> 
     
       <!--------- Card 1 -------->
     
             <div class="card" style="padding-top: 70px; text-align:left;"  >
-              <h5>Request 1:</h5>
+              <h5>Previous Booking</h5>
               <div class="pra" style="  font-family: 'Courier New', monospace;">
       
     <form >
-        <br>
+       <br>
       <lable> Kind of job:
         <input name="kindjob" type="text" size="12" maxlength="20" value="cleaner " readonly>
     <br><br>
       <lable> Type of job:
-        <input name="typejob" type="text" size="12" maxlength="20" value="full time job"ce readonly >
+        <input name="typejob" type="text" size="12" maxlength="20" value="full time job" readonly >
     <br><br>
     <lable> Availability:
         <input name="Availability" type="text" size="12" maxlength="20" value="weekend" readonly >
@@ -355,14 +354,6 @@
     
     </form>
 
-    <br> <br> 
-    <p style="text-align: center;">
-        <a class="button" href="#" style="color:rgb(87, 86, 86);" >Edit</a>
-        <a class="button" href="#" style="color:rgb(87, 86, 86)">Cancel</a>
-        <a class="button" href="#" style="color:rgb(87, 86, 86);">View Offers</a>
-
-    </p>
-    
                 </div>
               </div>
     
@@ -372,9 +363,9 @@
       <!------- Card 2 -------->
     
               <div class="card" style="padding-top: 70px; text-align:left;"  >
-                <h5>Request 2: </h5>
+                <h5>Previous Booking </h5>
                 <div class="pra" style="  font-family: 'Courier New', monospace;">
-       <br> 
+       
       
     <form >
         <br>
@@ -399,15 +390,7 @@
     <br><br>
     
     </form>
-    <br> <br> 
-    <p style="text-align: center;">
-        <a class="button" href="#" style="color:rgb(87, 86, 86);" >Edit</a>
-        <a class="button" href="#" style="color:rgb(87, 86, 86)">Cancel</a>
-        <a class="button" href="#" style="color:rgb(87, 86, 86);">View Offers</a>
-
-    </p>
-    
-   
+      
                   </div>
                 </div>
     </div>
