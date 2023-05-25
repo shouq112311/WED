@@ -13,10 +13,12 @@ die("Connection failed: " . mysqli_connect_error());
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<title> View HouseKeeper Profile</title>
-  <link rel = "stylesheet" href ="../css/home.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete HouseKeeper account</title>
+    <link rel = "stylesheet" href ="../css/home.css">
   
   <style>
     body{
@@ -32,7 +34,13 @@ background-color: rgb(255, 247, 237);
     
     --right-color: #FFDBA4;
   }
-  
+  .input-ground{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
   body, html{
     width: 100%;
     height: 100%;
@@ -316,12 +324,9 @@ margin-top: -42px;
 
   </style>
 </head>
-
-<body>
-
     <!--------- Header -------->
 
-  <div class="header" >
+    <div class="header" >
     <image src="../image/logooo.png" class="logo">
 <ul>
     <li><a href="../html/HK-homepage.html">Home</a></li>
@@ -336,92 +341,43 @@ margin-top: -42px;
     </ul>
     </div> 
   </div>
-  <!--------- Container -------->
-  <a href="#" class="back">
-    <image src="../image/back.png" class="back" alt="back" style="width:40px ; margin-left: 30px; margin-top: 30px;" onclick="history.go(-1);"></image>
-  </a>
-
   <div class="container2" style=height:1000px;> 
 
       <div class=box style="	display: block; margin-left: -65px ;">
- 
-
-  <!--------- Card 1 -------->
-
-        <div class="card" style="padding-top: 70px; text-align:left;"  >
-          <h5>My Profile:</h5> 
-          <div class="pra" style="  font-family: 'Courier New', monospace;">
-        <br>
-        <?php
-                
-                $currentUser = $_SESSION['email'];
-                //print($_SESSION['email']);
-                $sql = "SELECT * FROM `HK` WHERE email ='$currentUser'";
-
-                $gotResuslts = mysqli_query($connection,$sql);
-
-                if($gotResuslts){
-                    if(mysqli_num_rows($gotResuslts)>0){
-                        while($row = mysqli_fetch_array($gotResuslts)){
-                            //print_r("ygbyb8yn".$row['email']);
-                        ?>
-                  <img src="../image/userIcon.png "  id = "imagee" name="imagee"style="width:100px ; height: 100px; padding-left: 340px;">
-
-<form enctype='multipart/form-data' id="sign-up-form-homeowner" class="parent" style="padding-left:100px ;" action="../php/updateBabysitterProfile.php" method="post">
-   
-      
-        <input type="text" id="firstName"  name="firstName" value="FirstName: <?php echo $row['firstName']; ?>" style="background-color:white;"readonly required />
-        <input type="text" id="lastName"  name="lastName" value="LastName: <?php echo $row['lastName']; ?>" style="background-color:white;" readonly required/>
-        <input type="text" id="id"  name="id" value="ID: <?php echo $row['ID']; ?>" style="background-color:white;" readonly required/>
-        <input type="text" id="age"  name="age" value="Age: <?php echo $row['age']; ?>" style="background-color:white;" readonly required/>
-        <input type="text" name="gender" id="gender"   name="gender" value="Gender: <?php echo $row['gender']; ?>"style="border-radius:30px ; background-color:#fbf6ff;" readonly required/>
-        <input type="email" id="email"   name="email" value="Email: <?php echo $row['email']; ?>" style="background-color:white;" readonly required/>
-       <!--<input type="password" id="password"  name="password" value="Password: Dana1234" style="background-color:white;" readonly required/>-->
-        <input type="text" id="phoneNumber" name="phoneNumber" value="<?php echo $row['phone']; ?>" style="background-color:white;" readonly required/>
-        <input type="text" id="city"  name="city" value="City: <?php echo $row['city']; ?>" style="background-color:white;"  readonly required/> <br>
-       <!-- <input type="file" id="image"  name="image"  value="choose profile " style="background-color:white;"  accept="image/*" disabled /> <br>-->
-       
-
-
-        <textarea name="Bio" id="bio" cols="25" rows="10" style="border-radius :30px; resize: none; width:560px ; height: 150px; background-color:white;" readonly>   <?php echo $row['bio']; ?> </textarea>
-     
-        <br> <br><br>
-        <div style="text-align: center; display:flex;">
-                    
-            <div class="button"  onclick="unlock()" href="#" style="margin-left: 90px; color:rgb(104, 104, 104); " >save</div>
-            <div class="button"  onclick="unlock()" href="#" style="color:rgb(104, 104, 104);  " >Edit</div>
-            <div class="button"  onclick="unlock()" href="hk-delete.php" style="color:rgb(244, 50, 50); " >Delete Account!</div>
-
+      <!--<form action="£" method="POST" enctype="multipart/form-data"class="input-ground" id="login1">-->
             
-               
-              
-        </div>
-       
-        
+            <label for="password">Please enter your password to delete your account:</label>
+            <?php
+if(isset($_GET['error'])){
 
-           
+if($_GET['error'] == 'failToDelete'){
+    ?>
+    
+    <span style="color:red;">
+    <br>
+    please enter correct password
+</span>
+    
+<?php
+}
+elseif($_GET['error'] == 'acceptedOffer'){
+    ?>
+    
+    <span style="color:red;">
+    <br>
+    you have an accepted offer that has not came yet you are unable to delete your account
+</span>
+    
+<?php
 
-  </form >
+}}
+?>
+              <input type="password" id="password"  name="password"  style="background-color:white; width: 300px ; box-shadow: #080000;height: 35px;"  required placeholder="Password"/>
+              <input class="submit-btn" type="submit" onclick="return confirm('Are you sure you want to delete your account ?')" name="submit" value="delete account" />
 
-  
-
+</form>
 </div>
-</div>
-
-
-
-
-
-
-
-</div>
-</div>
-
-
-
-
-      <?php
-}}}  ?>
+    </div>
   <!--------- footer -------->
 
   <footer>
@@ -443,4 +399,3 @@ margin-top: -42px;
 </html>
 
 
-   
