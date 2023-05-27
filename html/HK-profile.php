@@ -367,7 +367,7 @@ margin-top: -42px;
                         ?>
                   <img src="../image/userIcon.png "  id = "imagee" name="imagee"style="width:100px ; height: 100px; padding-left: 340px;">
 
-<form enctype='multipart/form-data' id="sign-up-form-homeowner" class="parent" style="padding-left:100px ;" action="../php/updateBabysitterProfile.php" method="post">
+<form enctype='multipart/form-data' id="sign-up-form-homeowner" class="parent" style="padding-left:100px ;" action="." method="post">
    
       
         <input type="text" id="firstName"  name="firstName" value="FirstName: <?php echo $row['firstName']; ?>" style="background-color:white;"readonly required />
@@ -389,8 +389,8 @@ margin-top: -42px;
         <div style="text-align: center; display:flex;">
                     
             <div class="button"  onclick="unlock()" href="#" style="margin-left: 90px; color:rgb(104, 104, 104); " >save</div>
-            <div class="button"  onclick="unlock()" href="#" style="color:rgb(104, 104, 104);  " >Edit</div>
-            <div class="button"  onclick="unlock()" href="hk-delete.php" style="color:rgb(244, 50, 50); " >Delete Account!</div>
+            <div class="button"  onclick="unlock()" href="hk-edit.php" style="color:rgb(104, 104, 104);  " >Edit</div>
+            <div class="button"  onclick="unlock()" href="hk-delete" style="color:rgb(244, 50, 50); " >Delete Account!</div>
 
             
                

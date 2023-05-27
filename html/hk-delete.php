@@ -324,6 +324,8 @@ margin-top: -42px;
 
   </style>
 </head>
+<body>
+
     <!--------- Header -------->
 
     <div class="header" >
