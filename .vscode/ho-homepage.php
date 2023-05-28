@@ -1,6 +1,8 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
 
     <meta charset="utf-8">
@@ -316,37 +318,11 @@ footer {
 
 
 </style>
-
-
 </head>
 
 <body>
-  <div class="header" >
-    <image src="../image/logooo.png" class="logo" alt="logo">
-<ul>
-    <li style="text-decoration:underline ;"><a href="../php/HK-homepage.php">Home</a></li>
-    <li><a href="../php/HK-jobOffers.php">Job offers</a></li>
-    <li><a href="../html/HK-jobStatus.php">Job status</a></li>
-    <li><a href="../html/HK-current.php">Current job</a></li>
-    <li><a href="../php/HK-PREVIOUS.php">Previous job</a></li>
-
-</ul>
-
-<div class="dropdown">
-<image src="../image/userIcon.png" class="image" alt="User Icon">
-<ul>
-
-    <li><a href="../html/HK-profile.html">View Profile</a></li><br><br>
-    <li><a href="#"><br></a></li>
-    <li><a href="../html/login.html">Sign-Out</a></li>
-
-</ul>
-
-</div>
-
-  </div> 
-
-  <a href="#" class="back">
+<?php include("ho-heder.php");?>
+<a href="#" class="back">
     <image src="../image/back.png" class="back" alt="back" style="width:40px ; margin-left: 30px; margin-top: 30px;" onclick="history.go(-1);"></image>
   </a>
 
@@ -354,46 +330,61 @@ footer {
   <div class="container2" style=" height: 1350px;"> 
    <div class="option">
     <div class="title">
-        <!--chsnhge the qouts-->
-        <h2>“There is nothing more beautiful than someone who goes out of their way to make life beautiful for others.” </h2>
+        <!--chanhge the qouts-->
+        <h2>Post a job for free and connect with independent talent </h2>
+        <h3><?php print("welcome ".$_SESSION['firstName']);?> ! </h3>
+
     </div>
 
     <div class="box">
-        <!------------  VIEW JOB OFFERS   ----------->
+        <!------------   JOB Request   ----------->
         <div class="card">
             <image src="../image/job.png" alt="Request icon" class="icon">
-            <h5 style="margin-left: -10px;">View job offers</h5>
+            <h5 style="margin-left: -10px;">job Request</h5>
             <div class="pra">
-                <p>view the new offers and see the status of it</p>
+                <p>Applay a new Request and view previous Request</p>
 
                 <p style="text-align: center;" >
 
-                  <a class="button" href="../html/HK-jobOffers.html" >view</a>
-                    <a class="button" href="../html/HK-jobStatus.html" >status</a>
+                  <a class="button" href="../php/HO-newRequest.php" >New</a>
+                    <a class="button" href="../php/HO-PreviousRequest.php" >previous</a>
 
                 </p>
             </div>
         </div>
 
-         <!------------  MY JOBS   ----------->
+                 <!------------  offerlist   ----------->
+       
+                 <div class="card">
+                  <image src="../image/list.png" alt="list icon" class="icon">
+                      <h5 style="    margin-left: -10px;">View offer list</h5>
+                  <div class="pra">
+                      <p>select an offer</p>
+      <br>
+                      <p style="text-align: center;">
+                          <a class="button" href="../php/HO-viewOffer.php" >GO! </a>
+      
+                      </p>
+                  </div>
+              </div>
+         <!------------  MY Booking   ----------->
        
         <div class="card">
-            <image src="../image/check-list.png" alt="job icon" class="icon">
-                <h5 style="    margin-left: -10px;">My jobs</h5>
+            <image src="../image/booking.png" alt="booking icon" class="icon">
+                <h5 style="    margin-left: -10px;">View Booking</h5>
             <div class="pra">
                 <p>view current and previous jobs</p>
 <br>
-                <!--أحط الروابط--------------------------------------------------------------------------->
                 <p style="text-align: center;">
-                    <a class="button" href="../html/HK-current.html" >current </a>
-                    <a class="button" href="../html/HK-PREVIOUS.html">previous</a>
+                    <a class="button" href="../php/HO-currentBooking.php" >current </a>
+                    <a class="button" href="../php/HO-PreviousBooking.php">previous</a>
 
                 </p>
             </div>
         </div>
     </div>
 </div> 
- 
+
 <!---- About us -->
 
 <section id="aboutus" class="about">
@@ -425,7 +416,3 @@ footer {
 </body>
 
 
-
-
-
-</html>
