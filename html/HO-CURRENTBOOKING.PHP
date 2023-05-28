@@ -284,7 +284,35 @@ padding-bottom: 10px;
   </style>
 </head>
 <body>
-<?php include("HO-header.php");?>
+<body>
+      <div class="header" >
+        <image src="../image/logooo.png" class="logo">
+            <ul>
+                <li><a href="../html/HO-homepage.html">Home</a></li>
+                <li><a href="../html/HO-PreviousRequest.html">Previous Request</a></li>
+                <li><a href="../html/HO-newRequest.html">New Request</a></li>
+                <li><a href="../html/HO-viewOffer.html">Offer list</a></li>
+                <li  style="text-decoration:underline ;"><a href="../html/HO-currentBooking.html">Current Booking</a></li>
+                <li><a href="../html/HO-PreviousBooking.html">Previous Booking</a></li>
+            
+            </ul>
+      
+    <div class="dropdown">
+      <image src="../image/userIcon.png" class="image">
+      <ul>
+      
+        <li><a href="../html/HO-profile.html">View Profile</a></li><br>
+        <li><a href="#"><br><br></a></li>
+        <li><a href="../html/login.html">Sign-Out</a></li>
+      </ul>
+      </div> 
+      </div> 
+    
+      <a href="#" class="back">
+        <image src="../image/back.png" class="back" alt="back" style="width:40px ; margin-left: 30px; margin-top: 30px;" onclick="history.go(-1);"></image>
+      </a>
+
+
       <p style="background-color: white; color:  rgb(87, 86, 86); font-weight:bolder; font-size: 40px ; margin-left: 50px; font-family: Courier New, monospace; margin-top: -10px;">
     Current Bookings:    
      </p> 
